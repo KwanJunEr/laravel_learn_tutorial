@@ -11,3 +11,11 @@
     But can add in other stuff later 
   </p>
 </p>
+
+<hr>
+<h1>Notes Section1 </h1>
+<h2>Development Environment</h2>
+<ul>
+  <li>Laragon </li>
+  <li>Laravel Herd: https://herd.laravel.com/windows</li>
+</ul>
