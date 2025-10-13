@@ -1,0 +1,13 @@
+<p>
+  <h5>composer create-project laravel/laravel your-app</h5>
+  <p>
+    using Composer only gives you a clean Laravel backend, and you can connect with other frontend framework separately:
+    It setting up Laravel purely as a backend — meaning:
+    <ul>
+      <li> It runs PHP and serves APIs (routes like /api/...). </li>
+      <li>It uses MySQL, Eloquent models, controllers, etc.</li>
+      <li>It can serve JSON data to any frontend.</li>
+    </ul>
+    But can add in other stuff later 
+  </p>
+</p>
