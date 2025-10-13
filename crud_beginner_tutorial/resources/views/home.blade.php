@@ -7,9 +7,12 @@
 </head>
 <body>
 
-    @auth <!--These are called Blade directives-->so 
-
+    @auth <!--These are called Blade directives-->
     <p>Congrats Your Are Logged In</p>
+    <form action ="/logout" method="POST">
+        @csrf
+        <button>Log Out </button>
+    </form>
     @else
      <div style = "border: 3px solid black">
         <h2>Register </h2>
@@ -19,6 +22,15 @@
             <input name="email" type = "text" placeholder="email">
             <input name="password" type = "password" placeholder="password">
             <button>Register</button>
+        </form>
+    </div>
+    <div style = "border: 3px solid black">
+        <h2>Login </h2>
+        <form action = "/login" method="POST">
+            @csrf
+            <input name="loginname" type = "text" placeholder="name">
+            <input name="loginpassword" type = "password" placeholder="password">
+            <button>Sign In</button>
         </form>
     </div>
         

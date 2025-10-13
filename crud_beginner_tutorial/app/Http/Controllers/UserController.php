@@ -10,6 +10,26 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function login(Request $request){
+        $incomingFields = $request->validate([
+            'loginname' => 'required',
+            'loginpassword'=> 'required'
+        ]);
+        if(Auth::attempt(['name' => $incomingFields['loginname'], 'password' => $incomingFields['loginpassword']])){
+            $request->session()->regenerate();
+        }
+        return redirect('/');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+          // Invalidate the session
+        $request->session()->invalidate();
+
+          // Regenerate CSRF token to prevent session fixation
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }
     public function register(Request $request)
     {
         // Validate input
