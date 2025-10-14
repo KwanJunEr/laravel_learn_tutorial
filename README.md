@@ -19,3 +19,6 @@
   <li>Laragon </li>
   <li>Laravel Herd: https://herd.laravel.com/windows</li>
 </ul>
+
+<h1>Laragon</h1>
+<p>Can go to MySQL to open HeidiSQL</p>
