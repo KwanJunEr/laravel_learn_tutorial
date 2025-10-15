@@ -22,3 +22,6 @@
 
 <h1>Laragon</h1>
 <p>Can go to MySQL to open HeidiSQL</p>
+
+<h1>Blade Directives</h1>
+<p>Documentation Link: https://laravel.com/docs/11.x/blade#blade-directives </p>
