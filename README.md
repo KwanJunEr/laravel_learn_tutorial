@@ -25,3 +25,6 @@
 
 <h1>Blade Directives</h1>
 <p>Documentation Link: https://laravel.com/docs/11.x/blade#blade-directives </p>
+
+<h2>Laragon Apache Cannot Run issue with different php version </h2>
+<p>Have to refer to Thread-safe php version</p>
