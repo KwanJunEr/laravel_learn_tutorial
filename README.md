@@ -68,3 +68,26 @@ npm run build # production
 2) If you expose resources/ to the web, users could see your uncompiled source code, config files, or even secrets accidentally.
 3) Laravel is designed so that only public/ is the document root.
 4) Think of resources/ as your “workspace” and public/ as your “live website folder” that the web server can serve.
+
+<hr/>
+<h1>Route Linking</h1>
+<h2>Blade Link Without Named Route</h2>
+<pre>
+  <code>
+<a href="/" class="btn" style="background-color: #4643d3; color: white;">
+    <i class="fas fa-chevron-left"></i> Back
+</a>
+  </code>
+</pre>
+
+<p>The browser will go to the root URL (/)</p>
+<p>Works exactly the same as using a named route, just less flexible if the URL changes later</p>
+
+<h2>Named Routes</h2>
+<pre>
+  <code>
+    Route::get('/', function () {
+    return view('customer.index');
+})->name('home');
+  </code>
+</pre>
