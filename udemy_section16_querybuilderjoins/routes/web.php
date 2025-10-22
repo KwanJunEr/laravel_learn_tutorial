@@ -18,12 +18,38 @@ Route::get('/join', function(){
     //     ->get();
 
     //Left Join 
-    $usersWithOrders = DB::table('users')
-        ->leftJoin('orders', 'users.id', '=','orders.user_id')
+    // $usersWithOrders = DB::table('users')
+    //     ->leftJoin('orders', 'users.id', '=','orders.user_id')
+    //     ->select('users.name', 'orders.product_name')
+    //     ->get();
+
+    //Right Join 
+    // $usersWithOrders = DB::table('users')
+    //     ->rightJoin('orders', 'users.id', '=', 'orders.user_id')
+    //     ->select('orders.product_name', 'users.name')
+    //     ->get();
+
+    //Full Outer Join 
+    // $fullOuterJoin = DB::table('users')
+    //     ->leftJoin('orders', 'users.id', '=', 'orders.user_id')
+    //     ->select('users.name', 'orders.product_name')
+    //     ->unionAll(
+    //         DB::table('users')
+    //         ->rightJoin('orders', 'users.id', '=', 'orders.user_id')
+    //         ->select('users.name', 'orders.product_name')
+    //     )->get();
+
+    //Full Outer Join with Duplicates Removed
+     $fullOuterJoin = DB::table('users')
+        ->leftJoin('orders', 'users.id', '=', 'orders.user_id')
         ->select('users.name', 'orders.product_name')
-        ->get();
+        ->union(
+            DB::table('users')
+            ->rightJoin('orders', 'users.id', '=', 'orders.user_id')
+            ->select('users.name', 'orders.product_name')
+        )->get();
 
 
-    dd($usersWithOrders);
+    dd($fullOuterJoin);
 });
 
