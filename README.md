@@ -91,3 +91,29 @@ npm run build # production
 })->name('home');
   </code>
 </pre>
+
+<hr/>
+
+<h1>Laravel Modules</h1>
+<p>Steps to accomplish it</p>
+<h4>Step 1: Install via Composer</h4>
+<pre>
+  <code>
+    composer require nwidart/laravel-modules
+  </code>
+</pre>
+<h4>Publish config (optional)</h4>
+<p>You can publish the config if you want to customize paths:</p>
+<pre>
+  <code>
+    php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"=
+  </code>
+</pre>
+<h4>Creating a module: </h4>
+<pre>
+  <code>
+    php artisan module:make Blog
+  </code>
+</pre>
+<p>This will generate a folder strucutre for the Blog Module inside Modules/Blog with subfolders like Config, Database, Http, Providers, Routes,Views, e.t.c</p>
+<p>Each module behaves like a mini laravel app, with its own routes, controllers, models, migrations, views, and even config if needed</p>
