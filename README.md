@@ -117,3 +117,6 @@ npm run build # production
 </pre>
 <p>This will generate a folder strucutre for the Blog Module inside Modules/Blog with subfolders like Config, Database, Http, Providers, Routes,Views, e.t.c</p>
 <p>Each module behaves like a mini laravel app, with its own routes, controllers, models, migrations, views, and even config if needed</p>
+
+<h1>To donwload extensions</h1>
+<p>Add in ddl files in ext in bin in php</p>
