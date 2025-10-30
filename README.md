@@ -120,3 +120,15 @@ npm run build # production
 
 <h1>To donwload extensions</h1>
 <p>Add in ddl files in ext in bin in php</p>
+
+<h1>Creating a specific resource in a moodule</h1>
+<p>E.g. Create a new controller in a specific module</p>
+<pre>
+  <code>
+    php artisan module:make-controller ControllerName ModuleName
+  </code>
+</pre>
+<ul>
+  <li>ControllerName : The name of your controller</li>
+  <li>ModuleName : The name of the module where it will be created</li>
+</ul>
