@@ -132,3 +132,66 @@ npm run build # production
   <li>ControllerName : The name of your controller</li>
   <li>ModuleName : The name of the module where it will be created</li>
 </ul>
+
+<h1>Database Seeder</h1>
+<p>Commands and Steps to Create It</p>
+<h4>Step 1 </h4>
+<pre>
+  <code>
+    php artisan make:seeder SettingTierConditionSeeder
+  </code>
+</pre>
+<h4>Step 2</h4>
+<pre>
+  <code>
+    <?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class SettingTierConditionSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        DB::table('setting_tier_condition')->insert([
+            [
+                'name' => 'Active Units',
+                'slug' => 'active_units',
+                'is_wallet' => true,
+                'status' => true,
+            ],
+            [
+                'name' => 'Total Spending',
+                'slug' => 'total_spending',
+                'is_wallet' => false,
+                'status' => true,
+            ],
+            [
+                'name' => 'Total Earned Units',
+                'slug' => 'total_earned_units',
+                'is_wallet' => true,
+                'status' => true,
+            ],
+            [
+                'name' => 'Months Since Joining',
+                'slug' => 'months_since_joining',
+                'is_wallet' => false,
+                'status' => true,
+            ],
+        ]);
+    }
+}
+  </code>
+</pre>
+<h3>Step 3</h3>
+<pre>
+  <code>
+    php artisan db:seed --class=SettingTierConditionSeeder
+  </code>
+</pre>
+
