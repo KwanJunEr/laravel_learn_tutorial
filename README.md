@@ -133,6 +133,13 @@ npm run build # production
   <li>ModuleName : The name of the module where it will be created</li>
 </ul>
 
+<h4>Another Example of Creating Model </h4>
+<pre>
+  <code>
+    php artisan module:make-model SettingTierCondition Tier
+  </code>
+</pre>
+
 <h1>Database Seeder</h1>
 <p>Commands and Steps to Create It</p>
 <h4>Step 1 </h4>
