@@ -202,3 +202,9 @@ class SettingTierConditionSeeder extends Seeder
   </code>
 </pre>
 
+<h1>Key Generation Command </h1>
+<pre>
+  <code>
+    php artisan key:generate 
+  </code>
+</pre>
